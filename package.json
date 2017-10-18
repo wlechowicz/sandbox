@@ -10,10 +10,12 @@
   "author": "wlechowicz",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "chai": "^4.1.2",
     "eslint": "^4.9.0",
     "express": "^4.16.2",
     "mocha": "^4.0.1",
+    "mongodb": "^2.2.33",
     "node": "^8.3.0",
     "request": "^2.83.0"
   }

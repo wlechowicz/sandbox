@@ -1,11 +1,16 @@
 const Express = require('express');
+const bodyParser = require('body-parser')
 const app = new Express();
-const routes = require('./routes');
+const router = require('./routes');
+const MongoClient = require('mongodb').MongoClient;
 
 const port = 4000;
+const DBurl = 'mongodb://localhost:27017/sandbox';
 
-app.use('/api', routes);
+app.use(bodyParser.json());
 
-app.listen(port);
-
-console.log(`App listening on ${port}.`);
+MongoClient.connect(DBurl, (err, db) => {
+    app.use('/api', router(db));
+    app.listen(port);
+    console.log(`App listening on ${port}.`);
+});
