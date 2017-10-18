@@ -1,0 +1,20 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "description": "Sandbox for node, travis, mocha",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "author": "wlechowicz",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.9.0",
+    "express": "^4.16.2",
+    "mocha": "^4.0.1",
+    "node": "^8.3.0",
+    "request": "^2.83.0"
+  }
+}
