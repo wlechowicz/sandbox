@@ -14,8 +14,8 @@ module.exports = (db) => {
     
     router.use(requestLogger);
     router.get('/', home.getHome);
-    router.get('/items', (req, res) => items.getItems(req, res));
-    router.post('/items', (req, res) => items.saveItems(req, res));
+    router.get('/items', items.getItems.bind(items));
+    router.post('/items', items.saveItems.bind(items));
 
     return router;
 };

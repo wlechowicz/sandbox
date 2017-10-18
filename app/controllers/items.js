@@ -4,12 +4,13 @@ class ItemCtrl {
     }
 
     getItems(req, res) {
-        return this.db.collection('items').find({}).toArray().then(items => res.status(200).json(items));
+        this.db.collection('items').find({}).toArray().then(items => res.status(200).json(items));
     }
 
     saveItems(req, res) {
         const items = req.body;
-        return this.db.collection('items').insertMany(items).then(() => res.status(200));
+        // this doesn't respond, why?
+        this.db.collection('items').insertMany(items).then((r) => res.status(200).json({ status: 'OK', count: r.insertedCount || 0}));
     }
 }
 
