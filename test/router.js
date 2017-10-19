@@ -33,7 +33,7 @@ describe('Sandbox App', () => {
             });
         });
         describe('Invalid Path', () => {
-            const url = `${baseUrl}/afjwoefnwojvbnoejfhnpqwie124jfwjnvowjervbnbn346vwofjnwoe32nfjrjwefnf6vwojrfn`;
+            const url = `${baseUrl}/${Random.hexString(30)}`;
             it("returns status 404", (done) => {
                 request(url, (error, response, body) => {
                     expect(response.statusCode).to.equal(404);
