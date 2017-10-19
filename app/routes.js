@@ -17,5 +17,7 @@ module.exports = (db) => {
     router.get('/items', items.getItems.bind(items));
     router.post('/items', items.saveItems.bind(items));
 
+    router.get('*', home.notFound);
+
     return router;
 };
