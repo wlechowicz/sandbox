@@ -1,6 +1,9 @@
 language: node_js
 node_js:
 - 8.3.0
+branches:
+  only:
+  - master
 notifications:
   email:
     recipients:
@@ -13,4 +16,5 @@ install:
 - docker pull mvertes/alpine-mongo
 - docker run -d --name mongo -p 27017:27017 mvertes/alpine-mongo
 script:
+- npm i
 - npm test
