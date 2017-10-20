@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- 8.3.0
+notifications:
+  email:
+    recipients:
+    - wojciech.wlw@gmail.com
+    on_success: always
+    on_failure: always
+services:
+- docker
+install:
+- docker pull mvertes/alpine-mongo
+- docker run -d --name mongo -p 27017:27017 mvertes/alpine-mongo
+script:
+- npm test
