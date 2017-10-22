@@ -1,4 +1,4 @@
-# sandbox # [![Build Status](https://travis-ci.org/wlechowicz/sandbox.svg?branch=master)](https://travis-ci.org/wlechowicz/sandbox)
+# sandbox [![Build Status](https://travis-ci.org/wlechowicz/sandbox.svg?branch=master)](https://travis-ci.org/wlechowicz/sandbox) #
 Just my sandbox app for experimenting with various web techs.
 
 ## Plans ##
