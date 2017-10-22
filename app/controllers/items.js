@@ -4,7 +4,7 @@ class ItemCtrl {
     }
 
     getItems(req, res) {
-        this.db.collection('items').find({}).toArray().then(items => res.status(200).json(items));
+        this.db.collection('items').find({}).project({_id: 0}).toArray().then(items => res.status(200).json(items));
     }
 
     saveItems(req, res) {
