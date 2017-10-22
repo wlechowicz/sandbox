@@ -5,6 +5,6 @@ Just my sandbox app for experimenting with various web techs.
 - [x] node
 - [x] express
 - [x] tests (mocha)
-- [ ] CI (travis?)
+- [x] CI (travis)
 - [ ] templates
 - [ ] JS framework (ng4, vue, react)
